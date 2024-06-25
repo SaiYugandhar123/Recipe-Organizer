@@ -58,19 +58,3 @@ modal.addEventListener('click', event => {
         modal.innerHTML = '';
     }
 });
-// scripts.js
-const app = document.getElementById('root');
-
-var request = new XMLHttpRequest();
-request.open('GET', 'https://api.example.com/recipes', true);
-request.onload = function() {
-  if (request.status >= 200 && request.status < 400) {
-    const data = JSON.parse(request.responseText);
-    // Process the data and render the recipe cards
-  } else {
-    const errorMessage = document.createElement('marquee');
-    errorMessage.textContent = `Gah, it's not working!`;
-    app.appendChild(errorMessage);
-  }
-};
-request.send();
